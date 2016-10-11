@@ -32,7 +32,7 @@
                                     <constraint firstAttribute="width" constant="75" id="6e2-eQ-fEh"/>
                                     <constraint firstAttribute="height" constant="45" id="oDs-8h-XCJ"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="加密"/>
                                 <connections>
                                     <action selector="EncryptAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VWU-gG-NBf"/>
                                 </connections>
@@ -58,7 +58,7 @@
                                     <constraint firstAttribute="width" constant="75" id="0vb-wp-SZx"/>
                                     <constraint firstAttribute="height" constant="45" id="sBj-Fg-j2e"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="解密"/>
                                 <connections>
                                     <action selector="DecryptAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FAK-2j-9Yo"/>
                                 </connections>
