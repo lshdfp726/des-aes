@@ -10,6 +10,12 @@
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UITextField *inputText;
+
+@property (strong, nonatomic) IBOutlet UILabel *EncryptLabel;
+@property (strong, nonatomic) IBOutlet UILabel *DecryptLabel;
+@property (strong, nonatomic) IBOutlet UIButton *EncryptBtn;
+@property (strong, nonatomic) IBOutlet UIButton *DecryptBtn;
 
 @end
 

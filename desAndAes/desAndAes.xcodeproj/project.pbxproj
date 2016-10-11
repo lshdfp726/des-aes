@@ -15,6 +15,9 @@
 		325F4FBA1DAB81FB008B1CF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325F4FB81DAB81FB008B1CF9 /* LaunchScreen.storyboard */; };
 		325F4FC51DAB81FB008B1CF9 /* desAndAesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 325F4FC41DAB81FB008B1CF9 /* desAndAesTests.m */; };
 		325F4FD01DAB81FB008B1CF9 /* desAndAesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 325F4FCF1DAB81FB008B1CF9 /* desAndAesUITests.m */; };
+		325F4FDF1DAB83E6008B1CF9 /* DesAndAes.m in Sources */ = {isa = PBXBuildFile; fileRef = 325F4FDE1DAB83E6008B1CF9 /* DesAndAes.m */; };
+		325F4FE31DAC88C3008B1CF9 /* base64Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 325F4FE21DAC88C3008B1CF9 /* base64Tool.m */; };
+		325F4FE71DAC88CD008B1CF9 /* MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 325F4FE61DAC88CD008B1CF9 /* MD5.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 		325F4FCB1DAB81FB008B1CF9 /* desAndAesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = desAndAesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		325F4FCF1DAB81FB008B1CF9 /* desAndAesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = desAndAesUITests.m; sourceTree = "<group>"; };
 		325F4FD11DAB81FB008B1CF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		325F4FDD1DAB83E6008B1CF9 /* DesAndAes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesAndAes.h; sourceTree = "<group>"; };
+		325F4FDE1DAB83E6008B1CF9 /* DesAndAes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesAndAes.m; sourceTree = "<group>"; };
+		325F4FE11DAC88C3008B1CF9 /* base64Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base64Tool.h; sourceTree = "<group>"; };
+		325F4FE21DAC88C3008B1CF9 /* base64Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = base64Tool.m; sourceTree = "<group>"; };
+		325F4FE51DAC88CD008B1CF9 /* MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MD5.h; sourceTree = "<group>"; };
+		325F4FE61DAC88CD008B1CF9 /* MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MD5.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +110,10 @@
 		325F4FA91DAB81FB008B1CF9 /* desAndAes */ = {
 			isa = PBXGroup;
 			children = (
+				325F4FE41DAC88CD008B1CF9 /* md5 */,
+				325F4FE01DAC88C3008B1CF9 /* base64 */,
+				325F4FDD1DAB83E6008B1CF9 /* DesAndAes.h */,
+				325F4FDE1DAB83E6008B1CF9 /* DesAndAes.m */,
 				325F4FAD1DAB81FB008B1CF9 /* AppDelegate.h */,
 				325F4FAE1DAB81FB008B1CF9 /* AppDelegate.m */,
 				325F4FB01DAB81FB008B1CF9 /* ViewController.h */,
@@ -138,6 +151,24 @@
 				325F4FD11DAB81FB008B1CF9 /* Info.plist */,
 			);
 			path = desAndAesUITests;
+			sourceTree = "<group>";
+		};
+		325F4FE01DAC88C3008B1CF9 /* base64 */ = {
+			isa = PBXGroup;
+			children = (
+				325F4FE11DAC88C3008B1CF9 /* base64Tool.h */,
+				325F4FE21DAC88C3008B1CF9 /* base64Tool.m */,
+			);
+			path = base64;
+			sourceTree = "<group>";
+		};
+		325F4FE41DAC88CD008B1CF9 /* md5 */ = {
+			isa = PBXGroup;
+			children = (
+				325F4FE51DAC88CD008B1CF9 /* MD5.h */,
+				325F4FE61DAC88CD008B1CF9 /* MD5.m */,
+			);
+			path = md5;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,8 +307,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				325F4FE71DAC88CD008B1CF9 /* MD5.m in Sources */,
 				325F4FB21DAB81FB008B1CF9 /* ViewController.m in Sources */,
+				325F4FE31DAC88C3008B1CF9 /* base64Tool.m in Sources */,
 				325F4FAF1DAB81FB008B1CF9 /* AppDelegate.m in Sources */,
+				325F4FDF1DAB83E6008B1CF9 /* DesAndAes.m in Sources */,
 				325F4FAC1DAB81FB008B1CF9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -516,6 +550,7 @@
 				325F4FD61DAB81FB008B1CF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		325F4FD71DAB81FB008B1CF9 /* Build configuration list for PBXNativeTarget "desAndAesTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +559,7 @@
 				325F4FD91DAB81FB008B1CF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		325F4FDA1DAB81FB008B1CF9 /* Build configuration list for PBXNativeTarget "desAndAesUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +568,7 @@
 				325F4FDC1DAB81FB008B1CF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

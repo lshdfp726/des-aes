@@ -7,6 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "DesAndAes.h"
+
+
+static NSString *keyStr = @"12345678";
 
 @interface ViewController ()
 
@@ -17,8 +21,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
 }
 
+- (IBAction)EncryptAction:(id)sender {
+    
+   self.EncryptLabel.text =  [DesAndAes encrypt:self.inputText.text encryptOrDecrypt:Encrypt key:keyStr];
+}
+
+- (IBAction)DecryptAction:(id)sender {
+
+   self.DecryptLabel.text = [DesAndAes encrypt:self.EncryptLabel.text encryptOrDecrypt:Decrypt key:keyStr];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

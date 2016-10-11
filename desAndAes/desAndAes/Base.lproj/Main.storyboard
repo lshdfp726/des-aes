@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,8 +18,76 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="需要加密的字符串" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="maq-gi-i8A">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="ncr-Ge-emy"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6q-BJ-zac">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="6e2-eQ-fEh"/>
+                                    <constraint firstAttribute="height" constant="45" id="oDs-8h-XCJ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="EncryptAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VWU-gG-NBf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="加密密文" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLz-nJ-1eC">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="kop-Lv-419"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="解密字符串" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCP-Ya-1vD">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="oFQ-9h-x0G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgv-c3-Xv0">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="0vb-wp-SZx"/>
+                                    <constraint firstAttribute="height" constant="45" id="sBj-Fg-j2e"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="DecryptAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FAK-2j-9Yo"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jCP-Ya-1vD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="1vb-az-w53"/>
+                            <constraint firstItem="iLz-nJ-1eC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="52c-jy-NfE"/>
+                            <constraint firstItem="kgv-c3-Xv0" firstAttribute="top" secondItem="jCP-Ya-1vD" secondAttribute="bottom" constant="50" id="Ldm-yf-I0S"/>
+                            <constraint firstItem="maq-gi-i8A" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="MDv-Nz-c8U"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iLz-nJ-1eC" secondAttribute="trailing" constant="50" id="Ojb-Gh-3RQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kgv-c3-Xv0" secondAttribute="trailing" constant="50" id="Smw-59-edY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="maq-gi-i8A" secondAttribute="trailing" constant="50" id="UYr-lK-Tx5"/>
+                            <constraint firstItem="A6q-BJ-zac" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="efL-TG-lQd"/>
+                            <constraint firstItem="jCP-Ya-1vD" firstAttribute="top" secondItem="iLz-nJ-1eC" secondAttribute="bottom" constant="15" id="m9t-UB-wo5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jCP-Ya-1vD" secondAttribute="trailing" constant="50" id="pbq-Tr-xRc"/>
+                            <constraint firstItem="A6q-BJ-zac" firstAttribute="top" secondItem="jCP-Ya-1vD" secondAttribute="bottom" constant="50" id="uBb-bO-nkI"/>
+                            <constraint firstItem="iLz-nJ-1eC" firstAttribute="top" secondItem="maq-gi-i8A" secondAttribute="bottom" constant="50" id="w0C-Io-8YD"/>
+                            <constraint firstItem="maq-gi-i8A" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="z8j-3W-OPu"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="DecryptBtn" destination="kgv-c3-Xv0" id="8EK-gN-79n"/>
+                        <outlet property="DecryptLabel" destination="jCP-Ya-1vD" id="PEn-gY-uws"/>
+                        <outlet property="EncryptBtn" destination="A6q-BJ-zac" id="4id-Tb-ZsW"/>
+                        <outlet property="EncryptLabel" destination="iLz-nJ-1eC" id="1s2-BN-IJP"/>
+                        <outlet property="inputText" destination="maq-gi-i8A" id="PZr-CC-k6j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
